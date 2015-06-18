@@ -1,0 +1,4 @@
+salary = 15000
+percent_descont = "10"
+
+puts "The descont of salary is #{salary * percent_descont / 100}"

@@ -1,0 +1,24 @@
+variable = nil
+puts variable.class
+
+variable = 10
+puts variable.class
+
+variable = 100000000000000000000000000000
+puts variable.class
+
+variable = "Test"
+puts variable.class
+
+variable = true
+puts variable.class
+
+variable = 12.98
+puts variable.class
+
+puts [1,2,3].class
+
+puts :test.class
+
+variable = {:test => "Test"}
+puts variable.class
