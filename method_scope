@@ -1,0 +1,10 @@
+value = "Test"
+
+def double(val)
+  value = val * 2
+  value
+end
+
+puts "Value outside the method is '#{value}'"
+
+puts "Method with variable 'value' is #{double(4)}"
