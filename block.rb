@@ -3,12 +3,15 @@ class Car
 
     def info
         puts "The model of car is #{model}"
-        yield
+        yield if block_given?
     end
 
     def on_sale
         puts "The car is on sale!"
         yield @price
+    rescue Exception => e
+        puts e.message + " - block not informed"
+        false
     end
 end
 
@@ -34,3 +37,11 @@ car.on_sale do |price|
     price = price - (price * 0.25)
     puts "The price of car is #{price}"
 end
+
+puts ""
+puts "Error when block isn't informed"
+car.on_sale
+
+puts ""
+puts "Call method that wait a block, but not pass a block. The method not return error because the execution of block is treated"
+car.info
